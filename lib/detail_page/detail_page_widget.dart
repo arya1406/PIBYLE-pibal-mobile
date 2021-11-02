@@ -31,7 +31,7 @@ class _DetailPageWidgetState extends State<DetailPageWidget> {
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     mainAxisSize: MainAxisSize.max,
@@ -143,22 +143,26 @@ class _DetailPageWidgetState extends State<DetailPageWidget> {
                               ),
                             ),
                           ),
-                          Container(
-                            width: 120,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Color(0x00EEEEEE),
-                            ),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                              child: Text(
-                                '29-10-2021',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.title2.override(
-                                  fontFamily: 'Coda',
-                                  color: FlutterFlowTheme.tertiaryColor,
-                                  fontSize: 20,
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                            child: Container(
+                              width: 120,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Color(0x00EEEEEE),
+                              ),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                                child: Text(
+                                  '29-10-2021',
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.title2.override(
+                                    fontFamily: 'Coda',
+                                    color: FlutterFlowTheme.tertiaryColor,
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ),
                             ),

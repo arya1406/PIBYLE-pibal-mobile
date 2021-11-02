@@ -62,7 +62,7 @@ class _ReportPageWidgetState extends State<ReportPageWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                   child: Text(
-                    'Jika Anda menemukan kesalahan pada aplikasi, Anda dapat melaporkan kesalahan tersebut melalui Whatsapp atau Telegram Developer dengan mengeklik tombol dbawah. Sertakan Screenshoot bagian yang error atau tidak berjalan. \n\nTerima Kasih.\n-Aruya',
+                    'Jika Anda menemukan kesalahan pada aplikasi, Anda dapat melaporkan kesalahan tersebut melalui Whatsapp atau Telegram Developer dengan mengeklik tombol dibawah. Sertakan Screenshoot bagian yang error atau tidak berjalan. \n\nTerima Kasih.\n-Aruya',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.bodyText1.override(
                       fontFamily: 'Poppins',
@@ -76,7 +76,7 @@ class _ReportPageWidgetState extends State<ReportPageWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.75,
-                height: 80,
+                height: 45,
                 decoration: BoxDecoration(
                   color: Color(0xFFEEEEEE),
                 ),
@@ -113,7 +113,7 @@ class _ReportPageWidgetState extends State<ReportPageWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.75,
-                height: 80,
+                height: 45,
                 decoration: BoxDecoration(
                   color: Color(0xFFEEEEEE),
                 ),

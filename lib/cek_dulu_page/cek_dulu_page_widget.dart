@@ -87,8 +87,37 @@ class _CekDuluPageWidgetState extends State<CekDuluPageWidget> {
                           color: Color(0x00EEEEEE),
                         ),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            setState(() => _loadingButton1 = true);
+                            try {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: Text('Kirim ke CMSS ?'),
+                                    content: Text(
+                                        'Apakah anda yakin ingin mengirim Sandi Pibal ke CMSS ?'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: Text('No'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () async {
+                                          Navigator.pop(alertDialogContext);
+                                          await launchURL('http://172.19.1.1/');
+                                          ;
+                                        },
+                                        child: Text('Yes'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            } finally {
+                              setState(() => _loadingButton1 = false);
+                            }
                           },
                           text: 'Kirim ke CMSS',
                           options: FFButtonOptions(

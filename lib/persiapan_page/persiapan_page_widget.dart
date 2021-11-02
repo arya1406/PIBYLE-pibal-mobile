@@ -67,7 +67,7 @@ class _PersiapanPageWidgetState extends State<PersiapanPageWidget> {
                         ),
                         child: FlutterFlowDropDown(
                           options:
-                              ['Tubagus', 'Dinda', 'Ainun', 'Arya'].toList(),
+                              ['Arya', 'Dinda', 'Ainun', 'Tubagus'].toList(),
                           onChanged: (val) =>
                               setState(() => obsDownValue = val),
                           width: 18,
@@ -75,6 +75,7 @@ class _PersiapanPageWidgetState extends State<PersiapanPageWidget> {
                           textStyle: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
                             color: Color(0xFF29D0FF),
+                            fontSize: 20,
                           ),
                           icon: Icon(
                             Icons.person_rounded,
@@ -86,7 +87,7 @@ class _PersiapanPageWidgetState extends State<PersiapanPageWidget> {
                           borderColor: Colors.transparent,
                           borderWidth: 0,
                           borderRadius: 30,
-                          margin: EdgeInsetsDirectional.fromSTEB(8, 4, 8, 4),
+                          margin: EdgeInsetsDirectional.fromSTEB(45, 4, 8, 4),
                           hidesUnderline: true,
                         ),
                       )
@@ -120,11 +121,11 @@ class _PersiapanPageWidgetState extends State<PersiapanPageWidget> {
                           controller: anginController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: '00000',
+                            hintText: '0',
                             hintStyle: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Coda',
                               color: Color(0xFF29D0FF),
-                              fontSize: 19,
+                              fontSize: 23,
                             ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -146,7 +147,7 @@ class _PersiapanPageWidgetState extends State<PersiapanPageWidget> {
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Coda',
                             color: Color(0xFF29D0FF),
-                            fontSize: 19,
+                            fontSize: 23,
                           ),
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
@@ -190,7 +191,7 @@ class _PersiapanPageWidgetState extends State<PersiapanPageWidget> {
                             textStyle: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                               color: Color(0xFF29D0FF),
-                              fontSize: 20,
+                              fontSize: 23,
                             ),
                             icon: Icon(
                               Icons.arrow_drop_down,

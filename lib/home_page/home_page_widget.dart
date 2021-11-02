@@ -228,7 +228,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 size: 40,
                               ),
                               Text(
-                                'About',
+                                'Tutorial',
                                 style: FlutterFlowTheme.title2.override(
                                   fontFamily: 'Poppins',
                                   color: Color(0xFFF9F9F9),

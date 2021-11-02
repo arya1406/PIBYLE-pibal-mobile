@@ -29,6 +29,7 @@ dependencies:
   built_collection: ^5.0.0
   built_value: ^8.0.6
   cached_network_image: ^3.1.0
+  chewie: ^1.0.0
   cloud_firestore: ^2.5.4
   font_awesome_flutter:
   google_fonts: ^2.1.0
@@ -37,6 +38,7 @@ dependencies:
   page_transition:
   timeago:
   url_launcher:
+  video_player: ^2.1.10
 
 
   # The following adds the Cupertino Icons font to your application.

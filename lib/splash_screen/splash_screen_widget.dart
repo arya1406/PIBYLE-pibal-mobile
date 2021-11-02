@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../i_pnotif_page/i_pnotif_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -75,11 +76,21 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/logo.png',
-              width: double.infinity,
-              height: 140,
-              fit: BoxFit.contain,
+            InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => IPnotifPageWidget(),
+                  ),
+                );
+              },
+              child: Image.asset(
+                'assets/images/logo.png',
+                width: double.infinity,
+                height: 140,
+                fit: BoxFit.contain,
+              ),
             ).animated([animationsMap['imageOnPageLoadAnimation']]),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
