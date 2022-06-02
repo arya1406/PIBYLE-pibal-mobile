@@ -9,15 +9,24 @@ import 'package:google_fonts/google_fonts.dart';
 
 class IPnotifPageWidget extends StatefulWidget {
   IPnotifPageWidget({Key key}) : super(key: key);
-  final info = NetworkInfo();
+
   @override
   _IPnotifPageWidgetState createState() => _IPnotifPageWidgetState();
 }
 
+final info = NetworkInfo();
+
 class _IPnotifPageWidgetState extends State<IPnotifPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  var _wifiIP;
 
-  var wifiIP;
+  Future<void> getIP() async {
+    final info = NetworkInfo();
+    var wifiIP = await info.getWifiIP();
+
+    setState(() => _wifiIP = wifiIP);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +50,7 @@ class _IPnotifPageWidgetState extends State<IPnotifPageWidget> {
               fit: BoxFit.contain,
             ),
             Container(
-              width: 200,
+              width: MediaQuery.of(context).size.width * 0.8,
               height: 100,
               decoration: BoxDecoration(
                 color: Color(0x00EEEEEE),
@@ -58,7 +67,7 @@ class _IPnotifPageWidgetState extends State<IPnotifPageWidget> {
                     ),
                   ),
                   Text(
-                    '172.20.40.3',
+                    's',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.bodyText1.override(
                       fontFamily: 'Poppins',
@@ -145,6 +154,7 @@ class _IPnotifPageWidgetState extends State<IPnotifPageWidget> {
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
+                      print(_wifiIP);
                     },
                     text: '<< Belum',
                     options: FFButtonOptions(
