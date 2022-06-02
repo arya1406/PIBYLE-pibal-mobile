@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'flutter_flow/flutter_flow_animations.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
